@@ -8,46 +8,65 @@ Pixly is a sophisticated desktop gaming assistant that combines AI-powered chat 
 
 ## 🚀 Quick Start
 
+### Table of Contents
+- [Quick Start](#-quick-start)
+- [Features](#-features)
+- [Architecture Overview](#-architecture-overview)
+- [Technology Stack](#-technology-stack)
+- [Project Structure](#-project-structure)
+- [Security & Privacy](#-security--privacy)
+- [Contributing](#-contributing)
+- [Troubleshooting](#-troubleshooting)
+
 ### Prerequisites
-- Python 3.11 or higher
-- Windows OS (for screenshot capture functionality)
+- Windows 10/11 (overlay + screenshot capture)
+- Python 3.11+ (auto-installed by setup on Windows if missing)
+- [`uv`](https://docs.astral.sh/uv/) (auto-installed by setup if missing)
 - Google Gemini API key
 
-### Installation & Setup
+### One‑click Setup (Windows)
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd hacktoberfest
-   ```
+1) Clone the repo
+```bash
+git clone <repository-url>
+cd hacktoberfest
+```
 
-2. **Install dependencies**
-   ```bash
-   uv sync
-   ```
+2) Run the setup script
+- Double‑click `setup.bat` in File Explorer, or
+```bat
+setup.bat
+```
 
-3. **Set up environment variables**
-   - Create a `.env` file in the project root
-   - Add your Google Gemini API key:
-     ```
-     GOOGLE_API_KEY=your_api_key_here
-     ```
+What it does:
+- Ensures Python, pip, and `uv` are installed
+- Creates `.venv` and installs dependencies (`uv sync`)
+- Creates `vector_db/` and `.env` (if missing)
+- Starts the backend (`run.py`) in a new window, then launches the overlay (`overlay.py`)
 
-4. **Run the application**
-   
-   **Terminal 1 - Start Backend:**
-   ```bash
-   uv run run.py
-   ```
-   
-   **Terminal 2 - Start Frontend:**
-   ```bash
-   uv run overlay.py
-   ```
+3) Use Pixly
+- Press `Ctrl+Alt+M` to toggle the overlay
+- Start chatting with your AI gaming assistant!
 
-5. **Start using Pixly**
-   - Press `Ctrl+Alt+M` to toggle the overlay
-   - Start chatting with your AI gaming assistant!
+### Manual Setup (alternative)
+
+1) Create `.venv` and install dependencies with `uv`
+```bash
+uv venv .venv
+.\.venv\Scripts\activate
+uv sync
+```
+
+2) Create `.env` and add your API key
+```ini
+GOOGLE_API_KEY=your_api_key_here
+```
+
+3) Run the apps in two terminals
+```bash
+uv run run.py      # Terminal 1: backend
+uv run overlay.py  # Terminal 2: overlay
+```
 
 ## 🎯 Features
 
@@ -208,6 +227,10 @@ We welcome contributions! Here's how you can help:
 - Ensure the application has necessary Windows permissions
 - Check the screenshot settings in the UI
 - Verify the encryption key was generated correctly
+
+### Windows setup script shows `... was unexpected at this time.`
+- Close the terminal window and open a fresh Command Prompt, then run `setup.bat` again
+- Ensure your PATH does not contain malformed entries; if the issue persists, open an issue with the full output
 
 ## 📄 License
 
