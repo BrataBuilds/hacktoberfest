@@ -1,10 +1,24 @@
-# Pixly - Your AI Gaming Assistant 🎮
+<div align="center">
 
-Pixly is a sophisticated desktop gaming assistant that combines AI-powered chat functionality with automated screenshot capture to provide contextual gaming advice and support.
+<h1>Pixly — Your AI Gaming Assistant 🎮</h1>
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.11+-green.svg)
-![Platform](https://img.shields.io/badge/platform-Windows-blue.svg)
+<p>AI chat + smart screenshots = contextual help while you play.</p>
+
+<p>
+  <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="Python" src="https://img.shields.io/badge/python-3.11%2B-green.svg">
+  <img alt="Platform" src="https://img.shields.io/badge/platform-Windows-blue.svg">
+  <a href="#-quick-start"><img alt="Get Started" src="https://img.shields.io/badge/start-setup.bat-5c9eff.svg"></a>
+  <a href="#-features"><img alt="Features" src="https://img.shields.io/badge/read-Features-9b59b6.svg"></a>
+  <a href="#-troubleshooting"><img alt="Help" src="https://img.shields.io/badge/help-Troubleshooting-f39c12.svg"></a>
+  
+</p>
+
+</div>
+
+---
+
+> Tip: On Windows, just run `setup.bat` and start playing. See Quick Start below.
 
 ## 🚀 Quick Start
 
@@ -165,6 +179,12 @@ hacktoberfest/
 ├── screenshot_key.key       # Encryption key (auto-generated)
 └── README.md                # This file
 ```
+
+## 🖼️ Screenshots
+
+<p align="center">
+  <i>Coming soon — overlay UI and chat in action.</i>
+</p>
 
 ## 🔒 Security & Privacy
 

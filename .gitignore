@@ -13,3 +13,5 @@ wheels/
 *.json
 *.db
 vector_db/vector_db/
+vector_db/ 
+git
